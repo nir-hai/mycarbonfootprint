@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carbon Footprint Estimator</title>
+    <!-- Include Comfortaa Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Meta tag for mobile responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h1>Carbon Footprint Estimator</h1>
+
+<form id="carbonForm">
+
+    <!-- Step 1 -->
+    <div class="step" id="step-1">
+        <div class="question">
+            <label for="commute">How do you primarily commute?</label>
+            <select name="commute" id="commute" required>
+                <option value="">Select an option</option>
+                <option value="car">Car</option>
+                <option value="public_transport">Public Transport</option>
+                <option value="bicycle">Bicycle</option>
+                <option value="walking">Walking</option>
+            </select>
+        </div>
+        <div class="navigation">
+            <!-- Next Button -->
+            <button type="button" id="next-1" class="nav-button next-button">Next</button>
+        </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="step" id="step-2" style="display: none;">
+        <div class="question">
+            <label for="mileage">Approximately how many kilometers do you travel per week?</label>
+            <input type="range" name="mileage" id="mileage" min="0" max="1000" value="0" step="10" oninput="updateMileageValue(this.value)">
+            <span id="mileageValue">0 km</span>
+        </div>
+        <div class="navigation">
+            <!-- Back Button -->
+            <button type="button" id="back-2" class="nav-button back-button">Back</button>
+            <!-- Next Button -->
+            <button type="button" id="next-2" class="nav-button next-button">Next</button>
+        </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="step" id="step-3" style="display: none;">
+        <div class="question">
+            <label for="electricity">What is your average monthly electricity bill (in NIS)?</label>
+            <input type="range" name="electricity" id="electricity" min="0" max="1500" value="200" step="50" oninput="updateElectricityValue(this.value)">
+            <span id="electricityValue">200 NIS</span>
+        </div>
+        <div class="navigation">
+            <!-- Back Button -->
+            <button type="button" id="back-3" class="nav-button back-button">Back</button>
+            <!-- Next Button -->
+            <button type="button" id="next-3" class="nav-button next-button">Next</button>
+        </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="step" id="step-4" style="display: none;">
+        <div class="question">
+            <label for="meat">How often do you consume meat?</label>
+            <select name="meat" id="meat" required>
+                <option value="">Select an option</option>
+                <option value="daily">Daily</option>
+                <option value="few_times_week">Few times a week</option>
+                <option value="rarely">Rarely</option>
+                <option value="never">Never</option>
+            </select>
+        </div>
+        <div class="navigation">
+            <!-- Back Button -->
+            <button type="button" id="back-4" class="nav-button back-button">Back</button>
+            <!-- Submit Button -->
+            <button type="button" id="submit" class="nav-button next-button">Submit</button>
+        </div>
+    </div>
+
+</form>
+
+<div id="result" style="display: none;">
+    <!-- Result will be displayed here -->
+</div>
+
+<!-- Footer with "Made by Nir Hai" -->
+<footer>
+    <p>Made by Nir Hai</p>
+</footer>
+
+<!-- Include script.js -->
+<script src="script.js"></script>
+</body>
+</html>

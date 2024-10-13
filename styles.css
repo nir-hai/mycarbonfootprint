@@ -1,0 +1,205 @@
+/* Use the font included via link in HTML */
+body, html {
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the body and html elements cover full height */
+}
+
+/* Darker nature-inspired background */
+body {
+    background: linear-gradient(to bottom, #a8e063, #56ab2f); /* Darker shades of green */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container for the form to control padding on mobile */
+form, #result {
+    width: 90%;       /* Adjusted from 100% to 90% */
+    max-width: 500px; /* Reduced max-width from 600px to 500px */
+    margin: 40px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    border: 2px solid #28a745;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+}
+
+h1 {
+    text-align: center;
+    padding: 20px 10px;
+    color: #fff; /* Changed text color to white for better contrast */
+    margin: 0;
+}
+
+.question {
+    margin-bottom: 30px;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+select, input[type="number"], input[type="range"], option {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    margin-bottom: 5px;
+    border: 1px solid #ced4da;
+    border-radius: 10px;
+    font-family: 'Comfortaa', cursive;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    background: #dee2e6;
+    border-radius: 4px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #28a745;
+    border-radius: 50%;
+    margin-top: -8px;
+}
+
+span {
+    font-size: 1em;
+    color: #495057;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-button {
+    padding: 12px 25px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: 'Comfortaa', cursive;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-button:hover {
+    background-color: #218838;
+}
+
+.nav-button:focus {
+    outline: none;
+}
+
+#retakeButton {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    font-family: 'Comfortaa', cursive;
+}
+
+#retakeButton:hover {
+    background-color: #218838;
+}
+
+#retakeButton:focus {
+    outline: none;
+}
+
+/* Center the share buttons */
+#shareButtons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#shareButtons a {
+    display: inline-block;
+    margin: 10px 5px;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-family: 'Comfortaa', cursive;
+}
+
+#shareButtons a.facebook {
+    background: #3b5998;
+}
+
+#shareButtons a.twitter {
+    background: #1da1f2;
+}
+
+#shareButtons a.linkedin {
+    background: #0077b5;
+}
+
+#shareButtons a:hover {
+    opacity: 0.8;
+}
+
+h2 {
+    color:  #28a745; /* Changed text color to white for better contrast */
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.1); /* Adjusted to match darker background */
+    width: 100%;
+    font-size: 0.9em;
+    color: #fff; /* Changed text color to white for better contrast */
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-bottom: 0;
+    }
+
+    form, #result {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .navigation {
+        flex-direction: column;
+    }
+
+    .nav-button {
+        margin: 5px 0;
+        width: 100%;
+        justify-content: center;
+    }
+}
